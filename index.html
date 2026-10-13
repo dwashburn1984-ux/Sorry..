@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter From My Heart ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+  --pink: #f3dce3;
+  --rose: #bd7d91;
+  --lavender: #e9e2f3;
+  --cream: #fffaf6;
+  --text: #51434b;
+  --muted: #85747e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 15px 50px;
+  background: linear-gradient(140deg, #f9e9ed, #eee9f7, #fff8f0);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding: 35px 10px;
+}
+
+.heart {
+  color: var(--rose);
+  font-size: 32px;
+  animation: float 3s ease-in-out infinite;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 7vw, 3.5rem);
+  margin: 15px 0;
+}
+
+header p {
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 470px;
+  margin: auto;
+}
+
+.card {
+  background: rgba(255, 250, 246, .94);
+  border: 1px solid #ffffff;
+  border-radius: 22px;
+  padding: 25px;
+  margin-bottom: 18px;
+  box-shadow: 0 12px 35px #8b657014;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.85;
+}
+
+.small-heading {
+  color: var(--rose);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 28px 0 12px;
+}
+
+.click-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  transition: .2s ease;
+}
+
+.click-card {
+  background: white;
+  border: 1px solid #eadce4;
+  border-radius: 16px;
+  padding: 18px 8px;
+  min-height: 105px;
+  color: var(--text);
+}
+
+.click-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--rose);
+  background: #fff7fa;
+}
+
+.click-card .symbol {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 9px;
+}
+
+.click-card span:last-child {
+  font-size: .84rem;
+  font-weight: 600;
+}
+
+.reveal {
+  display: none;
+  background: #f5eff8;
+  border-left: 3px solid var(--rose);
+  border-radius: 10px;
+  padding: 17px;
+  margin-top: 12px;
+  line-height: 1.8;
+  animation: fade .3s ease;
+}
+
+.reveal.show {
+  display: block;
+}
+
+.letter {
+  border-top: 1px solid #eadce4;
+  margin-top: 30px;
+  padding-top: 25px;
+}
+
+.letter-content {
+  display: none;
+}
+
+.letter-content.show {
+  display: block;
+  animation: fade .4s ease;
+}
+
+.letter-content p {
+  margin-bottom: 18px;
+}
+
+.signature {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 28px;
+}
+
+.main-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  margin-top: 14px;
+  border: none;
+  border-radius: 13px;
+  background: var(--rose);
+  color: white;
+  font-weight: 600;
+}
+
+.main-button:hover {
+  background: #a9677c;
+  transform: translateY(-1px);
+}
+
+.secondary-button {
+  background: #eee6f5;
+  color: var(--text);
+}
+
+.note {
+  text-align: center;
+  color: var(--muted);
+  font-size: .85rem;
+  line-height: 1.8;
+  padding: 10px 15px;
+}
+
+#status {
+  color: var(--rose);
+  font-size: .85rem;
+  text-align: center;
+  min-height: 20px;
+  margin-top: 10px;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+@media (max-width: 500px) {
+  .click-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .click-card {
+    min-height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 14px;
+    padding: 12px 18px;
+  }
+
+  .click-card .symbol {
+    margin: 0;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+  <div class="heart">♡</div>
+  <h1>Something I need to tell you</h1>
+  <p>
+    I've been carrying a lot of feelings in my heart.
+    This is my way of putting them into words when
+    saying them out loud feels difficult.
+  </p>
+</header>
+
+<section class="card">
+  <p>
+    Before you read my letter, there are a few things
+    I need you to understand. You can click each little
+    card to read what I mean.
+  </p>
+
+  <div class="small-heading">Things I need you to know</div>
+
+  <div class="click-grid">
+    <button class="click-card" onclick="toggleReveal('care', this)"
+      aria-expanded="false">
+      <span class="symbol">♡</span>
+      <span>I did care</span>
+    </button>
+
+    <button class="click-card" onclick="toggleReveal('hurt', this)"
+      aria-expanded="false">
+      <span class="symbol">☁</span>
+      <span>Things hurt me</span>
+    </button>
+
+    <button class="click-card" onclick="toggleReveal('decision', this)"
+      aria-expanded="false">
+      <span class="symbol">🌿</span>
+      <span>My decision</span>
+    </button>
+  </div>
+
+  <div id="care" class="reveal">
+    Every memory matters to me, I'm just not 
+    sure that I want to make more in the same way,
+  </div>
+
+  <div id="hurt" class="reveal">
+   There were times you wouldn't listen.
+  </div>
+
+  <div id="decision" class="reveal">
+    I've thought about this a lot. I'm not asking
+    you to agree with my with what I do. but respect
+    what I am choosing. 
+  </div>
+
+  <div class="letter">
+    <h2>My letter to you</h2>
+
+    <p>
+      This is difficult for me to say, but I need
+      to be honest with you and myself.
+    </p>
+
+    <button class="main-button" onclick="openLetter()">
+      ♡ Read my letter
+    </button>
+
+    <div id="letterContent" class="letter-content">
+
+      <p>
+        I've spent a lot of time thinking about us,
+        and I've decided to end our relationship.
+        This isn't something I'm saying out of anger
+        or because of one bad day. I've thought about
+        what I want, and I know continuing this
+        relationship isn't right for me anymore.
+      </p>
+
+      <p>
+        I care about you, and the memories we've made
+        mattered to me. I'm sorry for leading you on, and I'm sorry 
+        it's very sudden..
+      </p>
+
+      <p>
+        I've been scared of hurting you, missing you,
+        and wondering if I'll regret this. But I can't
+        stay just because I'm afraid of leaving.
+        That wouldn't be fair to either of us.
+        You deserve someone who genuinely wants
+        to be in this relationship, and I deserve
+        to feel heard and respected, too.
+      </p>
+
+      <p>
+        I'm sorry this hurts.I don't hate you, I just can't make it work anymore.
+        I don't want to give you
+        false hope by calling this a break or leading you to think
+        we might get back together. I'm ending our
+        relationship, and my decision is final.
+        Please do not write a long letter back. 
+        It only hurts more.
+      </p>
+
+      <p>
+        I genuinely wish you the best. I really do appreciate
+        the good memories, but it's time for me to 
+        let go. Please respect my decision,
+        even if you don't agree with it.
+      </p>
+
+      <p class="signature">— [Danica]</p>
+
+      <button class="main-button secondary-button"
+        onclick="copyLetter()">
+        Copy the letter ♡
+      </button>
+
+      <div id="status" role="status" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<p class="note">
+  You don't have to hand this over until you're ready.
+  You can edit the words so they sound like you.
+  You deserve to communicate your feelings honestly
+  and have your boundaries respected.
+</p>
+
+</div>
+
+<script>
+function toggleReveal(id, button) {
+  const panel = document.getElementById(id);
+  const opening = !panel.classList.contains('show');
+
+  panel.classList.toggle('show', opening);
+  button.setAttribute('aria-expanded', String(opening));
+}
+
+function openLetter() {
+  const letter = document.getElementById('letterContent');
+  letter.classList.toggle('show');
+
+  const button = document.querySelector('.letter .main-button');
+
+  button.textContent = letter.classList.contains('show')
+    ? '♡ Hide my letter'
+    : '♡ Read my letter';
+
+  if (letter.classList.contains('show')) {
+    letter.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+async function copyLetter() {
+  const letter = document.getElementById('letterContent');
+  const paragraphs = letter.querySelectorAll('p');
+  const text = Array.from(paragraphs)
+    .map(p => p.innerText)
+    .join('\n\n');
+
+  const status = document.getElementById('status');
+
+  try {
+    await navigator.clipboard.writeText(text);
+    status.textContent = 'Letter copied! You can paste it wherever you need.';
+  } catch (error) {
+    status.textContent =
+      'Copy is unavailable in this browser. You can select the letter text and copy it manually.';
+  }
+}
+</script>
+
+</body>
+</html>
